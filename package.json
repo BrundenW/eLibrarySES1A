@@ -1,0 +1,27 @@
+{
+  "name": "elibraryses1a",
+  "version": "1.0.0",
+  "description": "Software Engineering Studio 1A project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrundenW/eLibrarySES1A.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrundenW/eLibrarySES1A/issues"
+  },
+  "homepage": "https://github.com/BrundenW/eLibrarySES1A#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "lowdb": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
