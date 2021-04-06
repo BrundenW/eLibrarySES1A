@@ -1,8 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Register</title>
+	<title>
+		Registration Form
+	</title>
+	<script src="register.js"></script>
 </head>
 	<body>
+		<div>
+			<h1>
+				Register Here
+			</h1>
+			<h4 id="error1" hidden> Please Fill All Textboxes</h4>
+			<h4 id="error2" hidden> Passwords Do Not Match</h4>
+		</div>
+		<div>
+			<form>
+				<div id="name">
+					<h2>
+						Name
+					</h2>
+					<label>
+						First Name
+					</label>
+					<input type="text" name="first_name" id="first_name"><br><br>
+					<label>
+						Last Name
+					</label>
+					<input type="text" name="last_name" id="last_name"><br><br>
+				</div>
+				<h2>
+					School Email
+				</h2>
+				<input type="text" name="schoolEmail" id="schoolEmail"><br><br>
+				<h2>
+					Password
+				</h2>
+				<input type="text" name="password" id="password"><br><br>
+				<h2>
+					Confirm Password
+				</h2>
+				<input type="text" name="confirmPassword" id="confirmPassword"><br><br>
+				<button type="button" onclick="register()">
+					Register
+				</button>
+			</form>
+		</div>
 	</body>
 </html>
