@@ -10,12 +10,12 @@ db.defaults({ posts: []}).write()
 const app = express();
 app.use(express.json());
 
-app.get('/posts', (req, res) => {
+app.get('/login', (req, res) => {
   const data = db.get("posts").value()
   return res.json(data)
 })
 
-app.post('/posts/new', (req, res) => {
+app.post('/register', (req, res) => {
   db.get("posts")
     .push(req.body)
     .write()
