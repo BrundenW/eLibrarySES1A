@@ -8,6 +8,11 @@ const db = lowDb(new FileSync('db.json'))
 db.defaults({ posts: []}).write()
 
 const app = express();
+
+app.set('views', __dirname + '/frontend/views');
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
+
 app.use(express.json());
 
 app.get('/login', (req, res) => {
@@ -15,7 +20,13 @@ app.get('/login', (req, res) => {
   return res.json(data)
 })
 
+app.get('/register', (req, res) => {
+  res.render("register");
+})
+
+
 app.post('/register', (req, res) => {
+
   db.get("posts")
     .push(req.body)
     .write()
