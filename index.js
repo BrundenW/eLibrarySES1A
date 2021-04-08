@@ -5,7 +5,7 @@ const lowDb = require("lowdb")
 const FileSync = require("lowdb/adapters/FileSync")
 
 const db = lowDb(new FileSync('db.json'))
-db.defaults({ posts: []}).write()
+db.defaults({ accounts: []}).write()
 
 const app = express();
 
@@ -27,10 +27,20 @@ app.get('/register', (req, res) => {
 
 app.post('/register', (req, res) => {
 
-  db.get("posts")
+  db.get("accounts")
     .push(req.body)
     .write()
     console.log(req.body)
+})
+
+app.post('/login', (req, res) => {
+  db.get("accounts")
+  let loginAcc = req.body
+  //TODO FIX 
+  if(!(db.find(acc => (acc.password === loginAcc.password && acc.username === loginAcc.username)) === null)) {
+    return res.render("main")
+  }
+    console.log(db.accounts)
 })
 
 const PORT = process.env.PORT || 5000;

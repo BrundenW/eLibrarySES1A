@@ -1,11 +1,8 @@
 {
-  "posts": [
-    {},
-    {},
+  "accounts": [
     {
-      "Hi": "Hello"
-    },
-    {},
-    {}
+      "password": "apple",
+      "username": "apple"
+    }
   ]
 }
