@@ -4,6 +4,7 @@
         <title>
             Registration Form
         </title>
+		<script src="register.js"></script>
         <style type="text/css">
             * {
                 margin : 0;
@@ -134,6 +135,8 @@
             <h1>
                 Registration Form
             </h1>
+			<h4 id="error1" hidden> Please Fill All Textboxes</h4>
+			<h4 id="error2" hidden> Passwords Do Not Match</h4>
         </div>
         <div class="main">
             <form>
@@ -141,11 +144,11 @@
                     <h2 class="name">
                         Name
                     </h2>
-                    <input class="firstname" type="text" name="first_name"><br>
+                    <input class="firstname" type="text" id="first_name"><br>
                     <label class="firstlabel">
                         First Name
                     </label>
-                    <input class="lastname" type="text" name="last_name">
+                    <input class="lastname" type="text" id="last_name">
                     <label class="lastlabel">
                         Last Name
                     </label>
@@ -153,17 +156,17 @@
                 <h2 class="name">
                     School Email
                 </h2>
-                <input class="email" type="text" name="schoolEmail">
+                <input class="email" type="text" id="schoolEmail">
                 <h2 class ="name">
                     Password
                 </h2>
-                <input class="password" type="text" name="password">
+                <input class="password" type="text" id="password">
                 <h2 class="name">
                     Confirm Password
                 </h2>
-                <input class="confirmpassword" type="text" name="confirmPassword">
+                <input class="confirmpassword" type="text" id="confirmPassword">
                 <div align="center">
-                    <button type="submit" align="center">
+                    <button type="submit" onclick="register()">
                         Register
                     </button>   
                 </div>
