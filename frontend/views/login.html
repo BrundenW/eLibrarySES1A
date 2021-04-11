@@ -4,7 +4,7 @@
         <title>
             Login Form
         </title>
-		<script src="register.js"></script>
+		<script src="../scripts/login.js"></script>
         <style type="text/css">
             * {
                 margin : 0;
@@ -136,20 +136,19 @@
                 Login
             </h1>
 			<h4 id="error1" hidden> Please Fill All Textboxes</h4>
-			<h4 id="error2" hidden> Incorrect Username and/or Password</h4>
         </div>
         <div class="main">
             <form>
                 <h2 class ="name">
                     Username
                 </h2>
-                <input class="password" type="text" id="password">
+                <input class="password" type="text" id="username">
                 <h2 class="name">
                     Password
                 </h2>
                 <input class="password" type="text" id="password">
 				<div align="center">
-                    <button type="submit" onclick="login()">
+                    <button type="button" onclick="login()">
                         Login
                     </button>
                 </div>
