@@ -1,7 +1,6 @@
 {
     "name": "hussein",
     "version": "1.0.0",
-    "description": "",
     "main": "app.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,7 +13,17 @@
         "express": "^4.17.1",
         "lodahs": "*",
         "lodash": "^4.17.21",
+        "module": "^1.2.5",
         "mongoose": "^5.12.3",
         "morgan": "^1.10.0"
-    }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/BrundenW/eLibrarySES1A.git"
+    },
+    "bugs": {
+        "url": "https://github.com/BrundenW/eLibrarySES1A/issues"
+    },
+    "homepage": "https://github.com/BrundenW/eLibrarySES1A#readme",
+    "description": ""
 }

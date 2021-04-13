@@ -6,14 +6,14 @@
 
             <div class="details content">
                 <h2>
-                    <%= e-library.title %>
+                    <%= blog.title %>
                 </h2>
                 <div class="content">
                     <p>
-                        <%= All Blogs.body %>
+                        <%= blog.body %>
                     </p>
                 </div>
-                <a class="delete" data-doc="<%= book._id %>">delete</a>
+                <a class="delete" data-doc="<%= blog._id %>">delete</a>
             </div>
 
             <%- include("./partials/footer.ejs") %>
@@ -21,7 +21,7 @@
                 <script>
                     const trashcan = document.querySelector('a.delete');
                     trashcan.addEventListener('click', (e) => {
-                        const endpoint = `/books/${trashcan.dataset.doc}`;
+                        const endpoint = `/blogs/${trashcan.dataset.doc}`;
                         fetch(endpoint, {
                                 method: 'DELETE',
                             })
