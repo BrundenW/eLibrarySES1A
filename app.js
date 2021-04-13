@@ -29,33 +29,12 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));
 
-app.get('/about', (req, res) => {
-    res.render('about', { title: 'About' });
-});
 
-app.post('/blogs', (req, res) => {
-    // console.log(req.body);
-    const blog = new Blog(req.body);
 
-    blog.save()
-        .then(result => {
-            res.redirect('/blogs');
-        })
-        .catch(err => {
-            console.log(err);
-        });
-});
-app.delete('/blogs/:id', (req, res) => {
-    const id = req.params.id;
 
-    Blog.findByIdAndDelete(id)
-        .then(result => {
-            res.json({ redirect: '/blogs' });
-        })
-        .catch(err => {
-            console.log(err);
-        });
-});
+
+
+
 
 
 
