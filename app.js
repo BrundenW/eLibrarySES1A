@@ -14,6 +14,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .catch(err => console.log(err));
 
 // register view engine
+app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 
 // middleware & static files
