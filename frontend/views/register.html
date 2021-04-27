@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Registration Form
+        </title>
+		<script src="register.js"></script>
+        <style type="text/css">
+            * {
+                margin : 0;
+                padding : 0;
+            }
+            body {
+                background-image : url(https://farm9.staticflickr.com/8515/8580011947_9cd0b76700_b.jpg);
+                background-position: center;
+                background-size: cover;
+                font-family: sans-serif;
+                margin-top: 40px;
+            }
+            .regform {
+                width  : 800px;
+                background-color : rgb (0, 0, 0, 6);
+                margin : auto;
+                color : #FFFFFF;
+                padding : 10px 0px 10px 0px;
+                text-align : center;
+                border-radius : 15px 15px 0px 0px;
+            }
+            .main {
+                background-color : rgb (0, 0, 0, 0.5);
+                width : 800px;
+                margin : auto;
+            }
+            form {
+                padding : 10px;
+            }
+            #name {
+                width : 100%;
+                height : 100px;
+            }
+            .name {
+                margin-left : 25px;
+                margin-top : 30px;
+                width : 125px;
+                color : white;
+                font-size : 18px;
+                font-weight : 700;
+            }
+            .firstname {
+                position : relative;
+                left : 200px;
+                top : -37px;
+                line-height : 40px;
+                border-radius : 6px;
+                padding : 0 22px;
+                font-size : 16px;
+            }
+            .lastname {
+                position : relative;
+                left : 417px;
+                top : -80px;
+                line-height : 40px;
+                border-radius : 6px;
+                padding : 0 22px;
+                font-size : 16px;
+                color : #555;
+            }
+            .firstlabel {
+                position : relative;
+                color : #e5e5e5;
+                text-transform : capitalize;
+                font-size : 14px;
+                left : 203px;
+                top : -45px;
+            }
+            .lastlabel {
+                position : relative;
+                color : #e5e5e5;
+                text-transform : capitalize;
+                font-size : 14px;
+                left : 175px;
+                top : -45px;
+            }
+            .email {
+                position : relative;
+                left : 200px;
+                top : -37px;
+                line-height : 40px;
+                width : 490px;
+                border-radius : 6px;
+                padding : 0 22px;
+                font-size : 16px;
+            }
+            .password {
+                position : relative;
+                left : 200px;
+                top : -37px;
+                line-height : 40px;
+                width : 300px;
+                border-radius : 6px;
+                padding : 0 22px;
+                font-size : 16px;
+            }
+            .confirmpassword {
+                position : relative;
+                left : 200px;
+                top : -37px;
+                line-height : 40px;
+                width : 300px;
+                border-radius : 6px;
+                padding : 0 22px;
+                font-size : 16px;
+            }
+            button {
+                background-color : rgba(192, 192, 192, 0.712);
+                display : block;
+                margin : 20px 0px 0px 20px;
+                text-align : center;
+                font-size: 25px;
+                border-radius : 12px;
+                border : 2px solid #2b2b2773;
+                padding : 14px 50px;
+                outline : none;
+                color : black;
+                cursor : pointer;
+                transition : 0.25px;
+            }
+            button:hover {
+                background-color : #5390F5;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="regform">
+            <h1>
+                Registration Form
+            </h1>
+			<h4 id="error1" hidden> Please Fill All Textboxes</h4>
+			<h4 id="error2" hidden> Passwords Do Not Match</h4>
+        </div>
+        <div class="main">
+            <form>
+                <div id="name">
+                    <h2 class="name">
+                        Name
+                    </h2>
+                    <input class="firstname" type="text" id="first_name"><br>
+                    <label class="firstlabel">
+                        First Name
+                    </label>
+                    <input class="lastname" type="text" id="last_name">
+                    <label class="lastlabel">
+                        Last Name
+                    </label>
+                </div>
+                <h2 class="name">
+                    School Email
+                </h2>
+                <input class="email" type="text" id="schoolEmail">
+                <h2 class ="name">
+                    Password
+                </h2>
+                <input class="password" type="text" id="password">
+                <h2 class="name">
+                    Confirm Password
+                </h2>
+                <input class="confirmpassword" type="text" id="confirmPassword">
+                <div align="center">
+                    <button type="submit" onclick="register()">
+                        Register
+                    </button>   
+                </div>
+				<div align="center">
+					<p class="name">
+						Already a member?
+						<a href="login.html">Login</a>
+					</p>
+				</div>
+            </form>
+        </div>
+    </body>
+</html>
