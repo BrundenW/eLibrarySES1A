@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const blogRoutes = require('./routes/blogRoutes');
+const registerRoutes = require('./routes/registerRoutes');
 
 // express app
 const app = express();
@@ -13,7 +14,7 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(result => app.listen(3000))
     .catch(err => console.log(err));
 
-// register view engine
+// view engine
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'ejs');
 
@@ -37,6 +38,9 @@ app.get('/about', (req, res) => {
 
 // blog routes
 app.use('/blogs', blogRoutes);
+
+// register routes
+app.use('/register', registerRoutes)
 
 // 404 page
 app.use((req, res) => {
