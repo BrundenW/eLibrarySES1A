@@ -26,8 +26,9 @@ app.use((req, res, next) => {
     res.locals.path = req.path;
     next();
 });
-
-// routes
+// register routes
+app.use('/register', registerRoutes)
+    // routes
 app.get('/', (req, res) => {
     res.redirect('/blogs');
 });
@@ -39,8 +40,7 @@ app.get('/about', (req, res) => {
 // blog routes
 app.use('/blogs', blogRoutes);
 
-// register routes
-app.use('/register', registerRoutes)
+
 
 // 404 page
 app.use((req, res) => {
