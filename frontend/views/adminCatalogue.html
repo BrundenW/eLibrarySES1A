@@ -95,15 +95,22 @@
     <div align="center">
         <form>
             <select name="books" size="10">
-            	<option value="test1"> Test1, Author </option>
-            	<option value="test2"> Test2, Author </option>
-            	<option value="test3"> Test3, Author </option>
-            	<option value="test4"> Test4, Author </option>
+            	<option value="test1" class="book"> Test1, Author </option>
+            	<option value="test2" class="book"> Test2, Author </option>
+            	<option value="test3" class="book"> Test3, Author </option>
+            	<option value="test4" class="book-remove"> Test4, Author </option>
             </select>
-        </form>
-        <button>
-        	Edit
-       	</button>
+        </form>    
+            <button onclick="remove()">
+                Edit
+            </button>
+        </a>
     </div>
 </body>
+<script>
+    function remove(){
+        const cbook = document.querySelector('.book-remove');
+        cbook.remove();
+    }
+</script>
 </html>
