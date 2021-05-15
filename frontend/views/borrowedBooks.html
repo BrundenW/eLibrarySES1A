@@ -78,9 +78,11 @@
 	</style>
 </head>
 <body>
-	<button class="menuBtn" align="left">
-        	Menu
-    </button>
+	<a href="userMenu.html">
+        <button class="menuBtn" align="left">
+            Menu
+        </button>
+    </a>
 	<div class="regform">
         <h1>
             Borrowed Books
@@ -98,12 +100,18 @@
             	<option value="test1"> Test1, Author </option>
             	<option value="test2"> Test2, Author </option>
             	<option value="test3"> Test3, Author </option>
-            	<option value="test4"> Test4, Author </option>
+            	<option value="test4" class="book-remove"> Test4, Author </option>
             </select>
         </form>
-        <button>
+        <button onclick="remove()">
         	Return
        	</button>
     </div>
 </body>
+<script>
+    function remove(){
+        const cbook = document.querySelector('.book-remove');
+        cbook.remove();
+    }
+    </script>
 </html>
