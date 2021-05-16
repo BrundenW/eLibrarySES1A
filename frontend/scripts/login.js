@@ -19,7 +19,7 @@ function login() {
 	else if (username == "staff") {
 		window.location.href = "staffMenu.html";
 	}
-	else if (username == "joebloggs") {
+	else if (username == "joebloggs@email.com") {
 		window.location.href = "userMenu.html";
 	}
 	else {
