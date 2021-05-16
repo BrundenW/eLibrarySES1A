@@ -10,6 +10,9 @@ function borrowedList() {
 function request() {
 	window.location.href = "requestBook.html";
 }
+function bookRequests() {
+	window.location.href = "bookRequests.html";
+}
 function addbook() {
 	window.location.href = "addBook.html";
 }

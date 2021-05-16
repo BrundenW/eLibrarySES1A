@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Catalogue</title>
+	<title>Book Requests</title>
     <script src="../scripts/functions.js"></script>
 	<style type="text/css">
 		body {
@@ -84,7 +84,7 @@
     </button>
 	<div class="regform">
         <h1>
-            Catalogue (Admin)
+            Book Requests
         </h1>
     </div>
     <div class="main">
@@ -96,20 +96,12 @@
     <div align="center">
         <form>
             <select name="books" size="10">
-            	<option value="test1"> Jane Eyre, Charlotte Bronte, Romance </option>
-                <option value="test2"> Persuasion, Jane Austen, Romance </option>
-                <option value="test3"> Brave New World, Aldous Huxley, Scifi </option>
-                <option value="test2"> Animal Farm, George Orwell, Distopian </option>
-                <option value="test4" class="book-remove"> Moby Dick, Herman Melville, Adventure </option>
-                <option value="test4"> Frankenstein, Mary Shelley, Scifi </option>
-                <option value="test5"> Great Expectations, Charles Dickens, Novel </option>
+            	<option value="test1" class="book"> Dracula, Bram Stoker, Scifi </option>
+            	<option value="test4" class="book-remove"> Frankenstein, Mary Shelley, Scifi </option>
             </select>
         </form>    
-            <button>
-                Edit
-            </button>
             <button onclick="remove()">
-                Remove
+                Add Book
             </button>
         </a>
     </div>
