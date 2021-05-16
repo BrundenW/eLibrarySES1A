@@ -4,6 +4,7 @@
 	<title>
 		Menu
 	</title>
+    <script src="../scripts/menu.js"></script>
 	<style type="text/css">
 		body {
 			background-color: #232323;
@@ -52,36 +53,25 @@
         </h1>
     </div>
     <div class="btnGroup" align="center">
-        <a href="adminCatalogue.html">
-            
-            <button type="button" onclick="register()">
-                Search Catalogue
-            </button>
-        </a>
-        <button type="button" onclick="register()"> 
+        <button type="button" onclick="adminCatalogue()">
+            Search Catalogue
+        </button>
+        <button type="button" onclick="addbook()"> 
         	Add Book
         </button>
-    </a>
-    <a href="adminCatalogue.html">
-        <button type="button" onclick="register()"> 
+        <button type="button" onclick="adminRequest()"> 
             Book Requests
         </button>
-        <a href="adminCatalogue.html">
-        </a>
-        <button type="button" onclick="register()">
+
+        <button type="button" onclick="createAdmin()">
             Create Admin Account
         </button>   
-        <a href="adminCatalogue.html">
-        </a>
-        <button type="button" onclick="register()">
+        <button type="button" onclick="profile()">
             Profile
         </button>
-    </a>
-    <a href="adminCatalogue.html">
-        <button type="button" onclick="register()">
+        <button type="button" onclick="logout()">
             Sign Out
         </button>
-    </a>
-</div>
+    </div>
 </body>
 </html>

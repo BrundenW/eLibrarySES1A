@@ -1,6 +1,7 @@
 function login() {
 	//hide the error message
 	document.getElementById("error1").hidden = true;
+	document.getElementById("error2").hidden = true;
 
 	//grab the variables from textboxes
 	var username = document.getElementById("username").value;
@@ -12,6 +13,16 @@ function login() {
 		return;
 	}
 
-	//changes to the login webpage
-	//window.location.href = "login.html";
+	if (username == "admin") {
+		window.location.href = "adminMenu.html";
+	}
+	else if (username == "staff") {
+		window.location.href = "staffMenu.html";
+	}
+	else if (username == "joebloggs") {
+		window.location.href = "userMenu.html";
+	}
+	else {
+		document.getElementById("error2").hidden = false;
+	}
 }

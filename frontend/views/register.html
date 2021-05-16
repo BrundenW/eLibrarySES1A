@@ -6,16 +6,9 @@
         </title>
 		<script src="../scripts/register.js"></script>
         <style type="text/css">
-            * {
-                margin : 0;
-                padding : 0;
-            }
             body {
-                background-image : url(https://farm9.staticflickr.com/8515/8580011947_9cd0b76700_b.jpg);
-                background-position: center;
-                background-size: cover;
+                background-color: #232323;
                 font-family: sans-serif;
-                margin-top: 40px;
             }
             .regform {
                 width  : 800px;
@@ -128,6 +121,13 @@
             button:hover {
                 background-color : #5390F5;
             }
+            .registerLink {
+                margin-top: 10px;
+                display :block;
+            }
+            .errorMessages {
+                margin-top: 10px;
+            }
         </style>
     </head>
     <body>
@@ -135,8 +135,10 @@
             <h1>
                 Registration Form
             </h1>
-			<h4 id="error1" hidden> Please Fill All Textboxes</h4>
-			<h4 id="error2" hidden> Passwords Do Not Match</h4>
+            <div class="errorMessages">
+    			<h4 id="error1" hidden> Please Fill All Textboxes</h4>
+    			<h4 id="error2" hidden> Passwords Do Not Match</h4>
+            </div>
         </div>
         <div class="main">
             <form>
@@ -168,7 +170,8 @@
                 <div align="center">
                     <button type="button" align="center" onclick="register()">
                         Register
-                    </button>   
+                    </button>
+                    <a href="login.html" class="registerLink">Login</a>   
                 </div>
             </form>
         </div>

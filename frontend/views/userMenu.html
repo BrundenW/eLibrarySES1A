@@ -4,6 +4,7 @@
 	<title>
 		Menu
 	</title>
+    <script src="../scripts/menu.js"></script>
 	<style type="text/css">
 		body {
 			background-color: #232323;
@@ -52,26 +53,23 @@
         </h1>
     </div>
     <div class="btnGroup" align="center">
-        <a href="catalogue.html">
-            <button type="button" onclick="register()">
-                Search Catalogue
-            </button>
-        </a>
-        <a href="borrowedBooks.html">
-            <button type="button" onclick="register()"> 
-                Borrowed Books
-            </button>
-        </a>
-        <a href="staffMenu.html">
-            <button type="button" onclick="register()"> 
-                Profile
-            </button>
-        </a>
-        <a href="staffMenu.html">
-            <button type="button" onclick="register()">
-                Sign Out
-            </button>   
-        </a>
+        
+        <button type="button" onclick="catalogue()">
+            Search Catalogue
+        </button>
+        
+        <button type="button" onclick="borrowedList()"> 
+            Borrowed Books
+        </button>
+        
+        <button type="button" onclick="register()"> 
+            Profile
+        </button>
+        
+        <button type="button" onclick="logout()">
+            Sign Out
+        </button>   
+        
     </div>
 </body>
 </html>

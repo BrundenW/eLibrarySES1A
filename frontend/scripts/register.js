@@ -26,5 +26,5 @@ function register() {
 	}
 
 	//changes to the login webpage
-	//window.location.href = "login.html";
+	window.location.href = "login.html";
 }

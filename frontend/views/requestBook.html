@@ -4,18 +4,11 @@
         <title>
             Registration Form
         </title>
-		<script src="../scripts/addBook.js"></script>
+        <script src="../scripts/functions.js"></script>
         <style type="text/css">
-            * {
-                margin : 0;
-                padding : 0;
-            }
             body {
-                background-image : url(https://farm9.staticflickr.com/8515/8580011947_9cd0b76700_b.jpg);
-                background-position: center;
-                background-size: cover;
+                background-color: #232323;
                 font-family: sans-serif;
-                margin-top: 40px;
             }
             .regform {
                 width  : 800px;
@@ -91,26 +84,7 @@
                 padding : 0 22px;
                 font-size : 16px;
             }
-            .password {
-                position : relative;
-                left : 200px;
-                top : -37px;
-                line-height : 40px;
-                width : 300px;
-                border-radius : 6px;
-                padding : 0 22px;
-                font-size : 16px;
-            }
-            .confirmpassword {
-                position : relative;
-                left : 200px;
-                top : -37px;
-                line-height : 40px;
-                width : 300px;
-                border-radius : 6px;
-                padding : 0 22px;
-                font-size : 16px;
-            }
+
             button {
                 background-color : rgba(192, 192, 192, 0.712);
                 display : block;
@@ -134,67 +108,26 @@
                 font-size: 10px;
                 margin : 0px 0px 0px 0px;
             }
-            /* Dropdown Button */
-            .dropbtn {
-              background-color: #3498DB;
-              color: white;
-              padding: 16px;
-              font-size: 16px;
-              border: none;
-              cursor: pointer;
-            }
 
-            /* Dropdown button on hover & focus */
-            .dropbtn:hover, .dropbtn:focus {
-              background-color: #2980B9;
-            }
-
-            /* The container <div> - needed to position the dropdown content */
-            .dropdown {
-              position: relative;
-              display: inline-block;
-            }
-
-            /* Dropdown Content (Hidden by Default) */
-            .dropdown-content {
-              display: none;
-              position: absolute;
-              background-color: #f1f1f1;
-              min-width: 160px;
-              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-              z-index: 1;
-            }
-
-            /* Links inside the dropdown */
-            .dropdown-content a {
-              color: black;
-              padding: 12px 16px;
-              text-decoration: none;
-              display: block;
-            }
-
-            /* Change color of dropdown links on hover */
-            .dropdown-content a:hover {background-color: #ddd}
-
-            /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-            .show {display:block;}
         </style>
     </head>
     <body>
-        <button class="menuBtn" align="left">
+        <button class="menuBtn" align="left" onclick="menu()">
             Menu
         </button>
         <div class="regform">
             <h1>
                 Request Book
             </h1>
+            <h4 id="error1" hidden> Please Fill All Textboxes</h4>
+            <h4 id="error2" hidden> Book Requested</h4>
         </div>
         <div class="main">
             <form>
                 <h2 class="name">
                     Book Title
                 </h2>
-                <input class="email" type="text" id="schoolEmail">
+                <input class="email" type="text" id="title">
                 <div id="name">
                     <h2 class="name">
                         Author
@@ -211,7 +144,7 @@
                 <h2 class="name">
                     Genre
                 </h2>
-                <input class="email" type="text" id="schoolEmail">
+                <input class="email" type="text" id="genre">
                 <!--<div class="dropdown">
                     <button onclick="myFunction()" type="button" class="dropbtn">Dropdown</button>
                     <div id="myDropdown" class="dropdown-content">
@@ -221,7 +154,7 @@
                     </div>
                 </div> -->
                 <div align="center">
-                    <button type="button" align="center" onclick="register()">
+                    <button type="button" align="center" onclick="add()">
                         Request
                     </button>   
                 </div>
